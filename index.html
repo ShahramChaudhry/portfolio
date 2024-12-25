@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Particle System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="sidebar">Content for  class "sidebar" Goes Here</div>
+
+<div id="initial-state">
+  
+    <div class="button-container">
+           
+            <button class="button" id="lookAtProjectsButton" onclick="redirectToProjects()">My Work</button>
+            <button class="button" id="whoAmIButton" onclick="redirectToSkills()">My Skills </button>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li class="tab active"><a href="index.html">home</a></li>
+            <li class="tab"><a href="about.html">about</a></li>
+            <li class="tab"><a href="projects.html">projects</a></li>
+            <li class="tab"><a href="skills.html">skills</a></li>
+        </ul>
+        <div class="sidebar-social">
+            <a href="https://www.linkedin.com/in/shahram-chaudhry/" target="_blank">
+                <img src="logos/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="mailto:sc9425@nyu.edu">
+                <img src="logos/gmail.png" alt="Gmail" class="social-icon">
+            </a>
+        </div>
+    </div>
+    
+    <div class="top-tab">
+        <span>home</span>
+    </div>
+
+    
+    <canvas id="canv" onmousemove="canv_mousemove(event);" onmouseout="mx=-1;my=-1;" width="1308" height="1090"></canvas>
+    <canvas id="wordCanv" width="1308" height="1090"></canvas>
+
+    <audio id="backgroundMusic" loop autoplay>
+        <source src="https://github.com/ShahramChaudhry/Portfolio/music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="intscript.js"></script>
+    
+    <script>
+        function redirectToSkills() {
+            window.location.href = 'skills.html';
+        }
+        function redirectToProjects() {
+            window.location.href = 'projects.html'; 
+        }
+    </script>
+</body>
+</html> 
